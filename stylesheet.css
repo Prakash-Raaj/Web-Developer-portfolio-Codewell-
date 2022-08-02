@@ -1,0 +1,297 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #707070;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #0a0a0b;
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+.hero-component {
+  padding: 1rem 0.5rem;
+  margin-right: 1rem;
+  line-height: 1.5;
+  letter-spacing: 1.3;
+  word-wrap: break-word;
+}
+
+.hero-heading {
+  color: var(--color-primary);
+  font-size: 3.5rem;
+}
+
+.hero-content {
+  color: var(--color-secondary);
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-component {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .hero-content {
+    font-size: 1.5rem;
+    max-width: 60ch;
+  }
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+}
+
+.logos img {
+  padding: 1rem 1.5rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logos {
+    padding: 1rem 5rem;
+    justify-content: space-between;
+  }
+  .logos img {
+    padding: 1.5rem 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logos {
+    justify-content: space-between;
+  }
+}
+
+.media {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 2rem;
+}
+.media-col {
+  margin-left: 1rem;
+}
+
+.media img {
+  width: auto;
+}
+.media-content h1 {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+.media .arrow {
+  display: inline-block;
+  color: var(--color-primary);
+  transform: translateY(4px);
+}
+
+/* .media-content h1::after {
+  content: "-->";
+} */
+
+.media p {
+  color: var(--color-secondary);
+  font-size: 1.8rem;
+  margin-top: 0;
+  padding-left: 0.8rem;
+  max-width: 56ch;
+}
+
+.media-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .media {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .media-col {
+    padding: 2rem 0;
+  }
+}
+
+.exp {
+  background: #2e3038;
+  padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.exp h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.exp p {
+  color: #adadad;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.para-one {
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .exp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7rem;
+    /* padding: ; */
+  }
+  .exp h1 {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+  }
+  .exp p {
+    font-size: 1.5rem;
+  }
+}
+
+.contact-me {
+  padding: 0 1.3rem;
+  margin-left: 2rem;
+}
+
+.contact-me h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.contact-me p {
+  color: #adadad;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  padding: 1.5rem 1.5rem;
+  background-color: #fbe850;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-me {
+    max-width: 50rem;
+  }
+}
+
+.footer {
+  background-color: #2e3038;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.footer-name {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  flex-grow: 1;
+}
+
+.footer-images img {
+  padding: 0 0.5rem;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+}
+
+.icon--white {
+  fill: var(--color-primary);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.nav__author {
+  font-size: 2rem;
+}
+
+.list {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav__list {
+  font-size: 1.6rem;
+}
+
+.nav__item {
+  padding: 1rem 0.5rem;
+}
+
+.nav__toggler {
+  cursor: pointer;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .collapsible__content {
+    opacity: 1;
+    max-height: 1000%;
+  }
+  .nav {
+    margin-top: -1rem;
+  }
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    display: flex;
+    width: auto;
+    max-height: 100%;
+    padding: 0 2rem;
+  }
+  .nav__item {
+    padding: 1.5rem 2rem;
+  }
+
+  button {
+    padding: 1.5rem 1.5rem;
+  }
+}
